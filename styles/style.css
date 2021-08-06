@@ -1,7 +1,10 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-/* common style start here  */
+/* ===================================================
+            common style start here  
+===================================================
+*/
 a {
     text-decoration: none;
 }
@@ -14,6 +17,11 @@ main {
     width: 1050px;
     margin-bottom: 77px;
 }
+
+/* ===================================================
+           football players area styles
+======================================================  
+*/
 
 .football-players {
     display: grid;
@@ -28,7 +36,6 @@ main {
 }
 .player-thumb img{
     width: 100%;
-    height: 256px;
 }
 
 .player info h3 {
@@ -42,7 +49,10 @@ main {
     line-height: 26px;
 }
 
-/* start copa america style here */
+/* ===================================================
+              start copa america style here 
+===================================================
+*/
 
 .copa-america {
     display: grid;
@@ -85,7 +95,10 @@ main {
 }
 
 
-/* start footer area style  */
+/* ===================================================
+           start footer area style  
+   ===================================================
+*/
 .football-logo img {
     width: 483.87px;
     height: 110px;
@@ -115,3 +128,94 @@ main {
     font-size: 18px;
     color: #000000;
 }
+
+
+
+/*===================================================
+             Responsive for Mobile Devices  
+===================================================
+*/
+
+@media only screen and (max-width:600px) {
+    .container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .football-players {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+    .football-player {
+        width: 100%;
+    }
+
+    .copa-america {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .copa-america-highlight {
+        width:100%;
+        height: auto;
+    }
+    .copa-america-thumb img {
+       width: 100%;
+    }
+    .football-logo img {
+        width: 100%;
+    }
+    
+    
+}
+
+
+/*===================================================
+             Responsive for Tablet  Devices  
+===================================================
+*/
+
+@media only screen and (min-width: 601px) {
+    .container {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .football-players {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    .football-player {
+        width: 100%;
+    }
+    .copa-america {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .copa-america-highlight {
+        width:100%;
+
+    }
+    .copa-america-thumb img {
+       width: 100%;
+    }
+    .football-logo img {
+        width: 100%;
+    }
+
+}
+
+
+@media only screen and (min-width: 1050px) {
+    
+    .football-players {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
