@@ -5,6 +5,9 @@
             common style start here  
 ===================================================
 */
+body {
+    margin: 0;
+}
 a {
     text-decoration: none;
 }
@@ -17,6 +20,59 @@ main {
     width: 1050px;
     margin-bottom: 77px;
 }
+
+
+/* ===================================================
+           header area styles
+======================================================  
+*/
+.header {
+    background-color: #2D25A0;
+    display: grid;
+    justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding:54px 0;
+    align-items: center;
+}
+nav a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 36px;
+}
+
+.banner-detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+.banner-text h2 {
+    font-size: 64px;
+    color: #fff;
+    font-weight: 700;
+}
+.banner-thumb img {
+    width: 100%;
+    background-size: cover;
+}
+
+.login {
+    display: flex;
+    width: 123px;
+    height: 44px;
+    background-color:#E02C6D;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 
 /* ===================================================
            football players area styles
@@ -64,7 +120,9 @@ main {
 .copa-america-highlight {
     width:507px;
 }
-.copa-america-highlight h2 {
+.copa-america-highlight h2,
+.team-news-title
+ {
     color: #0A0826;
     font-size: 48px;
     font-weight: 700;
@@ -93,12 +151,61 @@ main {
 .common-button i {
     margin-left: 8px;
 }
+.common-button:hover {
+    background-color: #e02c6ebb;
+    transition: 1s
+}
+
+
+/* ===================================================
+           start team news style  
+   ===================================================
+*/
+
+.team-news {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.team-news-info h2 {
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+}
+.team-news-info {
+    font-size: 16px;
+}
+.team-news-thumb img {
+    width: 100%;
+}
+.news-button {
+    background-color: #E02C6D;
+    width: 173px;
+    height: 44px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: 500;
+   margin:auto;
+   margin-top: 30px;
+}
+.news-button i {
+    margin-left: 15px;
+}
+
+
 
 
 /* ===================================================
            start footer area style  
    ===================================================
 */
+footer {
+    margin-top: 20px;
+}
 .football-logo img {
     width: 483.87px;
     height: 110px;
@@ -123,6 +230,8 @@ main {
 }
 
 
+
+
 .footer-top p {
     text-align: center;
     font-size: 18px;
@@ -131,8 +240,12 @@ main {
 
 
 
-/*===================================================
-             Responsive for Mobile Devices  
+/*========================================================
+=========================================================
+
+             Responsive for Mobile Devices 
+
+             =============================== 
 ===================================================
 */
 
@@ -141,11 +254,24 @@ main {
         width: 100%;
         margin-bottom: 30px;
     }
+    .banner-detail {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        padding: 10px;
+    }
+    .banner-thumb {
+        margin-top: 30px;
+    }
+    .banner-thumb img {
+        width: 100%;
+    }
     main {
         display: flex;
         align-items: center;
         flex-direction: column;
     }
+
 
     .football-players {
         display: grid;
@@ -167,6 +293,13 @@ main {
     .copa-america-thumb img {
        width: 100%;
     }
+    .team-news {
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+
+
+    
     .football-logo img {
         width: 100%;
     }
@@ -203,14 +336,29 @@ main {
     .copa-america-thumb img {
        width: 100%;
     }
+
+    .team-news {
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
     .football-logo img {
         width: 100%;
     }
 
 }
 
-
+/*===================================================
+             Responsive for Desktop  Devices  
+===================================================
+*/
 @media only screen and (min-width: 1050px) {
+    .container {
+        width: 1050px;
+    }
+    .team-news {
+        grid-template-columns: repeat(4, 1fr);
+       
+    }
     
     .football-players {
         grid-template-columns: repeat(3, 1fr);
